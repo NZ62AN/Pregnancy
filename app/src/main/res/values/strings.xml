@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">هفته شمار بارداری</string>
+    <string name="title_activity_main">هفته شمار بارداری</string>
+    <string name="textview">text</string>
+    <string name="share">اشتراک برنامه</string>
+    <string-array name="dokmeha">
+        <item>ارسال فایل نصب برنامه</item>
+        <item>ساير برنامه های ما</item>
+        <item>وب سایت ما</item>
+        <item> امتياز به برنامه</item>
+        <item>خروج</item>
+    </string-array>
+</resources>

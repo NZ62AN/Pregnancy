@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/Widget.AppCompat.ActionBar"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="ir.kisal.pregnancy.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:weightSum="1">
+
+
+        <com.abidarteam.pregnancy.DatePicker
+            android:id="@+id/datePickerStart"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="0.25" />
+
+
+        <com.abidarteam.pregnancy.DatePicker
+            android:id="@+id/datePickerEnd"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="0.25" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="20.0dip" />
+
+        <TextView
+            android:id="@+id/tvConutWeek"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="0.15"
+            android:background="@drawable/myborder"
+            android:gravity="center_horizontal"
+            android:text="@string/textview"
+            android:textSize="@dimen/padding_large"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:id="@+id/ll4"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp"
+            android:layout_weight="0.15"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+            <ImageView
+                android:id="@+id/telegram"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:onClick="onClick"
+                android:src="@drawable/telegram" />
+
+            <ImageView
+                android:id="@+id/otherapp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="20dp"
+                android:layout_toRightOf="@+id/telegram"
+                android:onClick="onClick"
+                android:src="@drawable/other_app" />
+
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

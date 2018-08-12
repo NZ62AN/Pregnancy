@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="ir.kisal.pregnancy.MainActivity">
+
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/drawer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true">
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:orientation="vertical"
+            android:weightSum="1">
+
+            <include
+                android:id="@+id/actionbar"
+                layout="@layout/lyt_toolbar_main" />
+
+            <RelativeLayout
+                android:id="@+id/rlStart"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginLeft="11dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginTop="5dp"
+                android:layout_weight="0.40"
+                android:clickable="true"
+                android:foregroundGravity="top">
+
+                <TextView
+                    android:id="@+id/textView1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginRight="23dp"
+                    android:text="تاریخ شروع بارداری"
+                    android:textColor="#555555" />
+
+                <ir.kisal.pregnancy.DatePicker
+                    android:id="@+id/datePickerStart"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/textView1" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1.0dip"
+                android:layout_below="@id/datePickerStart"
+                android:layout_marginLeft="35dp"
+                android:layout_marginRight="35dp"
+                android:background="@color/mdtp_line_background" />
+
+            <RelativeLayout
+                android:id="@+id/rlEnd"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginLeft="11dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginTop="15dp"
+                android:layout_weight="0.40"
+                android:clickable="true"
+                android:foregroundGravity="top">
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginRight="23dp"
+                    android:text="تاریخ روز جاری"
+                    android:textColor="#555555" />
+
+                <ir.kisal.pregnancy.DatePicker
+                    android:id="@+id/datePickerEnd"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/textView2" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1.0dip"
+                android:layout_below="@id/datePickerEnd"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="35dp"
+                android:layout_marginRight="35dp"
+                android:background="@color/mdtp_line_background" />
+
+            <RelativeLayout
+                android:id="@+id/rlWeek"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginLeft="11dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginTop="15dp"
+                android:layout_weight="0.15"
+                android:clickable="true"
+                android:foregroundGravity="top"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/tvConutWeek"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="@string/textview"
+                    android:textColor="#000000"
+                    android:textSize="@dimen/padding_large"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+            <ir.kisal.pregnancy.CustomProgress
+                android:id="@+id/progressbar"
+                android:layout_width="match_parent"
+                android:layout_height="15dp"
+                android:layout_marginLeft="35dp"
+                android:layout_marginRight="35dp"
+                android:layout_marginTop="@dimen/custom_progress_margin" />
+
+            <LinearLayout
+                android:id="@+id/ll4"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                android:layout_weight="0.16"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <ImageView
+                    android:id="@+id/telegram"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:onClick="onClick"
+                    android:src="@drawable/telegram" />
+
+                <ImageView
+                    android:id="@+id/otherapp"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="20dp"
+                    android:layout_toRightOf="@+id/telegram"
+                    android:onClick="onClick"
+                    android:src="@drawable/other_app" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="190.0dip"
+            android:layout_height="match_parent"
+            android:layout_gravity="right"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_gravity="center"
+                android:background="#88000000"
+                android:src="@mipmap/ic_launcher" />
+
+            <ListView
+                android:id="@+id/list_drawer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10.0dip"
+                android:background="#88000000"
+                android:choiceMode="singleChoice"
+                android:divider="#ff444444"
+                android:dividerHeight="2.0dip" />
+        </LinearLayout>
+    </android.support.v4.widget.DrawerLayout>
+</RelativeLayout>

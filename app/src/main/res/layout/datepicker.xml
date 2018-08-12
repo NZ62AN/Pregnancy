@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:baselineAligned="true"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="TextView"
+        android:textSize="@dimen/padding_large"
+        android:textStyle="bold" />
+
+    >
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:baselineAligned="true"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <Button
+                android:id="@+id/year_plus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/picker_top"
+                android:height="44sp"
+                android:width="78sp" />
+
+            <EditText
+                android:id="@+id/year_display"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|center_horizontal"
+                android:background="@drawable/picker_middle"
+                android:focusable="false"
+                android:gravity="center"
+                android:height="49sp"
+                android:singleLine="true"
+                android:width="78sp" />
+
+            <Button
+                android:id="@+id/year_minus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/picker_bottom"
+                android:height="44sp"
+                android:width="78sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <Button
+                android:id="@+id/month_plus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/picker_top"
+                android:height="44sp"
+                android:width="78sp" />
+
+            <EditText
+                android:id="@+id/month_display"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|center_horizontal"
+                android:background="@drawable/picker_middle"
+                android:focusable="false"
+                android:gravity="center"
+                android:height="49sp"
+                android:singleLine="true"
+                android:width="78sp" />
+
+            <Button
+                android:id="@+id/month_minus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/picker_bottom"
+                android:height="44sp"
+                android:width="78sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <Button
+                android:id="@+id/date_plus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/picker_top"
+                android:height="44sp"
+                android:width="78sp" />
+
+            <EditText
+                android:id="@+id/date_display"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|center_horizontal"
+                android:background="@drawable/picker_middle"
+                android:gravity="center"
+                android:height="49sp"
+                android:inputType="number"
+                android:singleLine="true"
+                android:width="78sp" />
+
+            <Button
+                android:id="@+id/date_minus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/picker_bottom"
+                android:height="44sp"
+                android:width="78sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
